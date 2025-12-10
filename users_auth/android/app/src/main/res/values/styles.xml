@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS has decided
+         to display the app. This theme determines the colors of the window background, etc; it is
+         expected to be replaced by the normal theme soon (as soon as the Flutter platform has
+         determined the app's brightness and main colors while the app initializes).
+         This theme is only used at cold start when running the app with a release (--release)
+         Flutter build. It is assumed that the app will never be started with a --profile or
+         --debug build when a previous release build was the last app in the stack. -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             Flutter draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started. This theme
+         determines the colors of the window background, etc; it is expected to be overridden by
+         the dynamic theme of Flutter. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>

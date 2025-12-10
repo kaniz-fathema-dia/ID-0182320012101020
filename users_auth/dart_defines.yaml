@@ -1,0 +1,7 @@
+// Dart configuration for the Authentication App
+// Version: 1.0.0
+// This file contains app-wide configuration
+
+const String APP_VERSION = '1.0.0';
+const String APP_NAME = 'Authentication';
+const String PACKAGE_NAME = 'com.authentication.app';

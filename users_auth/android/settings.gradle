@@ -1,0 +1,48 @@
+pluginManagement {
+    def flutterSdkPath = {
+        def flutterRoot = System.env.FLUTTER_ROOT
+        if (flutterRoot) {
+            return flutterRoot
+        }
+
+        def flutterProperties = new File(rootDir.parentFile, '.flutter-properties')
+        if (flutterProperties.exists()) {
+            def properties = new Properties()
+            flutterProperties.withInputStream { properties.load(it) }
+            return properties.getProperty('flutter.sdk')
+        }
+
+        return null
+    }
+    def flutterSdkPath = flutterSdkPath()
+    if (flutterSdkPath != null) {
+        includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+    }
+
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+plugins {
+    id "dev.flutter.flutter-gradle-plugin" version "1.0.0" apply false
+}
+
+include ':app'
+
+def localPropertiesFile = new File(rootDir, 'local.properties')
+def properties = new Properties()
+
+assert localPropertiesFile.exists()
+localPropertiesFile.withReader("UTF-8") { reader -> properties.load(reader) }
+
+def flutterSdkPath = properties.getProperty('flutter.sdk')
+assert flutterSdkPath != null, 'flutter.sdk not set in local.properties'
+assert flutterSdkPath.contains('\\') || flutterSdkPath.contains('/'), 'flutter.sdk invalid'
+
+def flutterEngineVersion = properties.getProperty('flutter.engineVersion')
+if (flutterEngineVersion != null) {
+    println "Flutter Engine Version: $flutterEngineVersion"
+}

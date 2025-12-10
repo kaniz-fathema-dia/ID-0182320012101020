@@ -1,0 +1,31 @@
+# Flutter Deployment Configuration
+# Build commands for all platforms
+
+[Android]
+# Debug build
+build.command.debug = flutter build apk --debug
+
+# Release build (APK)
+build.command.release = flutter build apk --release
+
+# App Bundle (for Google Play Store)
+build.command.bundle = flutter build appbundle --release
+
+[iOS]
+# Debug build
+build.command.debug = flutter build ios --debug
+
+# Release build
+build.command.release = flutter build ios --release
+
+[Web]
+# Development server
+run.command = flutter run -d chrome
+
+# Production build
+build.command = flutter build web --release --web-renderer=html
+
+[General]
+project.name = Authentication
+project.version = 1.0.0
+app.id = com.authentication.app

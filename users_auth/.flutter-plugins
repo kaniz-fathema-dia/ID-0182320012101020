@@ -1,0 +1,24 @@
+{
+  "flutterRoot": "${FLUTTER_ROOT}",
+  "flavors": [],
+  "targets": {
+    "android": {
+      "enabled": true,
+      "minVersion": 21
+    },
+    "ios": {
+      "enabled": true,
+      "minVersion": "11.0"
+    },
+    "web": {
+      "enabled": true,
+      "renderer": "canvaskit"
+    }
+  },
+  "project": {
+    "name": "Currency Converter",
+    "description": "A comprehensive Flutter app with converter and authentication",
+    "version": "1.0.0+1",
+    "authors": []
+  }
+}
