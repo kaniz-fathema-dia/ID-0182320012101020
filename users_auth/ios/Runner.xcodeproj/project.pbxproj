@@ -1,0 +1,29 @@
+{
+    "archiveVersion": 1,
+    "objectVersion": 54,
+    "objects": {
+        "33CC11D3253DEE11004B6097": {
+            "isa": "PBXBuildFile",
+            "fileRef": "33CC11D4253DEE11004B6097",
+            "settings": {}
+        },
+        "33CC11D4253DEE11004B6097": {
+            "isa": "PBXFileReference",
+            "lastKnownFileType": "sourcecode.c.h",
+            "path": "GeneratedPluginRegistrant.h",
+            "sourceTree": "SOURCE_ROOT"
+        },
+        "33CC11D5253DEE11004B6097": {
+            "isa": "PBXBuildFile",
+            "fileRef": "33CC11D6253DEE11004B6097",
+            "settings": {}
+        },
+        "33CC11D6253DEE11004B6097": {
+            "isa": "PBXFileReference",
+            "lastKnownFileType": "sourcecode.c.objc",
+            "path": "GeneratedPluginRegistrant.m",
+            "sourceTree": "SOURCE_ROOT"
+        }
+    },
+    "rootObject": "97C146EF1CF9000F007C117D"
+}
